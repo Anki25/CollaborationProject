@@ -1,0 +1,10 @@
+<div class="container" ng-controller="ForumController as ctrl">
+<p style="font-family:courier;color: #00688b;font-size: 40px;font-weight: bold;">Forum</p><br/>
+<div ng-repeat="forum in ctrl.forums">
+<p style="border: 5px solid red;border-radius: 25px;
+    padding: 30px;font-family:verdana;color: #8b4513;font-size: 20px;">{{forum.topic}}
+<a href="#/view_forum" ng-click="ctrl.getSelectedForum(forum.forum_id)">Read</a></p>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>

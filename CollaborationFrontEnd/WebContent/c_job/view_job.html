@@ -1,0 +1,25 @@
+<div ng-controller="JobController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div></div>
+
+<div class="container" ng-controller="JobController as ctrl">
+<div ng-hide="currentUser==''">
+<div class="form-group">
+<p style="font-family:'Sofia';color: #00688b;font-size: 60px;font-weight: bold;font-style: oblique;">
+{{selectedJob.job_title}}</p>
+<br>
+Posted By:<label>{{selectedJob.user_name}}</label>
+on <label>{{creation_date}}</label>
+<br>
+<br>
+<p style="font-style: italic;font-weight: bold;font-size: 20px;color: red;">{{selectedJob.company}}</p><br/>
+<label>{{selectedJob.details}}</label>
+
+<button type="button" ng-click="ctrl.applyForJob(selectedJob.job_id)" 
+class="btn btn-danger btn-sm">Apply for job</button>
+</div>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>

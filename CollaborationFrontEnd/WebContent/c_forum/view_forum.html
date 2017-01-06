@@ -1,0 +1,47 @@
+<div ng-controller="ForumController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div></div>
+
+<div class="container" ng-controller="ForumController as ctrl">
+<div ng-hide="currentUser==''">
+<div class="form-group">
+<!-- <label>Forum Id: </label>{{selectedForum.forum_id}}
+<br>-->
+<p style="font-family:'Sofia';color: #00688b;font-size: 60px;font-weight: bold;font-style: oblique;">
+{{selectedForum.topic}}</p><br/><br/>
+Posted By:<label>{{selectedForum.user_name}}</label>
+on <label>{{selectedForum.creation_date}}</label>
+<br>
+<br>
+
+<p style="font-style: italic;font-weight: bold;font-size: 20px;color: red;">
+{{selectedForum.content}}</p><br/><br/>
+
+<form ng-submit="ctrl.doComment(selectedForum.forum_id)" name="myForm" class="form-horizontal">
+
+<div class="row">
+<div class="form-group col-md-12">
+<label class="col-md-2 control-lable" for="comments">Comment</label>
+<div class="col-md-7">
+<textarea rows="6" column="200" ng-model="ctrl.forumcomment.comments" id="comments"
+class="form-control input-sm" ></textarea>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-actions floatRight">
+<input type="submit" value="Comment" class="btn btn-danger btn-sm">
+</div>
+</div>
+
+</form>
+
+<div ng-repeat="forumcomment in ctrl.forumcomments">
+<p><span class="glyphicon glyphicon-edit"> {{forumcomment.comments}}</span></p><br/>
+<p>By: {{forumcomment.user_name}}  On: {{forumcomment.comment_date}} </p>
+</div>
+</div>
+</div></div>
+<br/><br/><br/><br/><br/><br/><br/>

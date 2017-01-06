@@ -1,0 +1,10 @@
+<div class="container" ng-controller="EventController as ctrl">
+<p style="font-family:courier;color: #00688b;font-size: 40px;font-weight: bold;">Latest buzz..!!</p><br/>
+<div ng-repeat="event in ctrl.events">
+<p style="border: 5px solid red;border-radius: 25px;
+    padding: 30px;font-family:verdana;color: #8b4513;font-size: 20px;">{{event.event_title}}
+    <a href="#/view_event" ng-click="ctrl.getSelectedEvent(event.event_id)">Find out more</a></p>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

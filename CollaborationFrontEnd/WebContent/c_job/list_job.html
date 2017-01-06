@@ -1,0 +1,13 @@
+<div class="container" ng-controller="JobController as ctrl">
+<p style="font-family:courier;color: #00688b;font-size: 40px;font-weight: bold;">New Opportunities</p><br/>
+<div class="form-group"></div>
+<p><input type="text" ng-model="job.ctrl.company"></p>
+
+<div ng-repeat="job in ctrl.jobs | filter:job.ctrl.company">
+<p style="border: 5px solid red;border-radius: 25px;
+    padding: 30px;font-family:verdana;color: #8b4513;font-size: 20px;">{{job.job_title}}
+    <a href="#/view_job" ng-click="ctrl.getSelectedJob(job.job_id)">See</a>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>

@@ -1,0 +1,37 @@
+<div ng-controller="EventController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+</div>
+
+<br/><br/>
+
+<div class="container" ng-controller="EventController as ctrl">
+<div ng-hide="currentUser==''">
+<div class="form-group">
+<p style="font-family:'Sofia';color: #00688b;font-size: 60px;font-weight: bold;font-style: oblique;">
+{{selectedEvent.event_title}}</p>
+<br>
+Posted By:<label>{{selectedEvent.user_name}}</label><br/>
+on <p>{{selectedEvent.creation_date}}</p>
+<br>
+<br>
+<p style="font-style: italic;font-weight: bold;font-size: 20px;color: red;">{{selectedEvent.info}}</p><br/><br/>
+
+</div>
+
+<p>{{selectedEvent.attending}}</p>
+<button type="button" ng-click="ctrl.doAttend(selectedEvent.event_id)" class="btn btn-default btn-sm">
+<span class="glyphicon glyphicon-thumbs-up"></span> People attending this event
+</button>
+<p>{{selectedEvent.not_attending}}</p>
+<button type="button" ng-click="ctrl.doNotAttend(selectedEvent.event_id)" class="btn btn-default btn-sm">
+<span class="glyphicon glyphicon-thumbs-up"></span> People not attending this event
+</button>
+
+     <br/><br/>
+
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/>

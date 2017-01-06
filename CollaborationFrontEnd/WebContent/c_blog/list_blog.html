@@ -1,0 +1,10 @@
+<div class="container" ng-controller="BlogController as ctrl">
+<p style="font-family:courier;color: #00688b;font-size: 40px;font-weight: bold;">Check out the latest blogs</p>
+<div ng-repeat="blog in ctrl.blogs">
+<p style="border: 5px solid red;border-radius: 25px;
+    padding: 30px;font-family:verdana;color: #8b4513;font-size: 20px;">{{blog.blog_title}}
+    <a href="#/view_blog" ng-click="ctrl.getSelectedBlog(blog.blog_id)">Read here...</a></p>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+
